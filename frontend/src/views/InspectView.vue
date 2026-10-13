@@ -61,39 +61,15 @@
           </el-card>
         </el-col>
         <el-col :span="12">
-          <el-card>
-            <template #header><span>巡检概览</span></template>
-            <div class="counts">
-              <el-tag
-                v-for="(v, k) in result.counts"
-                :key="k"
-                size="large"
-                class="count-tag"
-              >
-                {{ k }}：{{ v }}
-              </el-tag>
-              <span v-if="!Object.keys(result.counts).length" class="muted">未检测到目标</span>
+          <el-card class="report-card">
+            <template #header><span>施工安全巡检报告</span></template>
+            <div class="report pre-wrap" v-if="result.report">{{ result.report }}</div>
+            <div v-else class="muted">
+              {{ result.processing ? 'AI 研判报告生成中，请稍候（云端推理模型响应较慢，最长约 2 分钟）…' : '暂无报告' }}
             </div>
-            <el-alert
-              v-if="result.intrusion_count > 0"
-              :title="`危险作业区闯入 ${result.intrusion_count} 起：${result.intrusion_labels.join('、')}`"
-              type="error"
-              show-icon
-              :closable="false"
-              class="intrusion-alert"
-            />
-            <div class="summary pre-wrap">{{ result.summary }}</div>
           </el-card>
         </el-col>
       </el-row>
-
-      <el-card class="report-card">
-        <template #header><span>施工安全巡检报告</span></template>
-        <div class="report pre-wrap" v-if="result.report">{{ result.report }}</div>
-        <div v-else class="muted">
-          {{ result.processing ? 'AI 研判报告生成中，请稍候（云端推理模型响应较慢，最长约 2 分钟）…' : '暂无报告' }}
-        </div>
-      </el-card>
     </div>
   </div>
 </template>
@@ -206,24 +182,8 @@ async function runInspect() {
   width: 100%;
   max-height: 420px;
 }
-.counts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
 .muted {
   color: #94a3b8;
-}
-.intrusion-alert {
-  margin-top: 12px;
-}
-.summary {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #334155;
-}
-.report-card {
-  margin-top: 16px;
 }
 .report {
   font-size: 14px;

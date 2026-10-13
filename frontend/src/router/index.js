@@ -34,6 +34,12 @@ const routes = [
         meta: { title: '相册' }
       },
       {
+        path: 'help',
+        name: 'help',
+        component: () => import('../views/HelpView.vue'),
+        meta: { title: '使用手册' }
+      },
+      {
         path: 'profile',
         name: 'profile',
         component: () => import('../views/ProfileView.vue'),

@@ -128,7 +128,7 @@ const stats = [
 const features = [
   { icon: Cpu, color: 'linear-gradient(135deg,#2563eb,#3b82f6)', title: '端云协同推理', desc: '边缘端 YOLO26n（CPU）实时检测，云端大模型深度理解，算力在端云间合理分工。' },
   { icon: WarningFilled, color: 'linear-gradient(135deg,#ea580c,#f59e0b)', title: '多危险区预警', desc: '手动划定多个危险作业区，人员车辆闯入即刻标红，5 秒防抖自动截屏存证。' },
-  { icon: Document, color: 'linear-gradient(135deg,#059669,#10b981)', title: 'AI 巡检报告', desc: '一键生成四段式《施工安全巡检报告》：现场概况 / 隐患研判 / 整改建议 / 处置结论。' },
+  { icon: Document, color: 'linear-gradient(135deg,#059669,#10b981)', title: 'AI 巡检报告', desc: '一键生成《施工安全巡检报告》：图中人物及数量 / 安全危险情况 / 总结。' },
   { icon: Picture, color: 'linear-gradient(135deg,#7c3aed,#a78bfa)', title: '相册管理', desc: '截图自动入库，文件夹分类整理，多选批量移动/删除，相册图片可随时再次巡检。' },
   { icon: Monitor, color: 'linear-gradient(135deg,#0891b2,#22d3ee)', title: '持续监控', desc: '浏览器直连本机摄像头，开启后切换页面监控不中断，仅手动停止，云端部署也能用。' },
   { icon: Setting, color: 'linear-gradient(135deg,#475569,#94a3b8)', title: '个人中心', desc: '头像、昵称、个性签名、主题色个性化设置，数据全部存于本机数据库。' }

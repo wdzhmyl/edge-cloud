@@ -9,6 +9,7 @@
         <el-menu-item index="/app/inspect">图片巡检</el-menu-item>
         <el-menu-item index="/app/monitor">实时监控</el-menu-item>
         <el-menu-item index="/app/album">相册</el-menu-item>
+        <el-menu-item index="/app/help">使用手册</el-menu-item>
       </el-menu>
       <el-dropdown trigger="click" @command="onCommand">
         <div class="user">

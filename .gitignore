@@ -1,0 +1,34 @@
+# ===== 模型权重（首次运行自动下载，无需入库）=====
+*.pt
+*.onnx
+*.engine
+
+# ===== Python 缓存 =====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# ===== 环境变量 / 密钥 =====
+.env
+
+# ===== 用户数据（SQLite 数据库 / 头像 / 相册照片，运行时生成，不入库）=====
+data/
+
+# ===== 运行时临时文件 / 缓存 =====
+.gradio/
+tmp/
+# 实时监控自动/主动截屏存证（运行时生成，不入库）
+screenshots/
+*.tmp
+*.log
+# 内网穿透临时地址（运行时生成，不入库）
+tunnel_url.txt
+
+# ===== 归档旧版（原始 zip 备份在 city_safety_eye_deploy/）=====
+legacy/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
